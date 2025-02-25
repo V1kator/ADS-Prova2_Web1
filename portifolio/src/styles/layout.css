@@ -1,0 +1,96 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo escuro */
+    scroll-behavior: smooth;
+  }
+  
+  /* Estrutura principal */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 140px; /* Mais espaço entre os blocos */
+    padding: 50px 10px;
+  }
+  
+  /* Cada seção (bloco) */
+  .section {
+    width: 80%;
+    min-height: 100vh; /* Ajusta a altura para evitar cortes */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mantém o título no topo */
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.5); /* Efeito de luz verde */
+    background-color: black; /* Cor padrão preta */
+    padding: 60px;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* Quando a seção entra na tela */
+  .section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Texto branco com efeito de luz verde */
+  .section h1, .section h2 {
+    color: white;
+    text-shadow: 0px 0px 15px #00ff00; /* Efeito de brilho verde */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Texto padrão dentro das seções */
+  .section p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Seções lado a lado */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    gap: 50px; /* Maior espaço entre os blocos */
+  }
+  
+  /* Ajuste individual de cada bloco */
+  #about, #projects, #skills, #education {
+    width: 48%;
+  }
+  
+  /* Ajusta a altura dos projetos para evitar cortes */
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 120vh; /* Maior altura para os projetos */
+  }
+  
+  /* Contato */
+  #contact {
+    text-align: center;
+  }
+  
+  /* Links de contato */
+  .contact-links a {
+    color: #00ff00;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .contact-links a:hover {
+    color: white;
+  }
+  
